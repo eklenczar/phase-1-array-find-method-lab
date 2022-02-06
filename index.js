@@ -4,12 +4,14 @@ const record = [
     { year: "2013", result: "L"},
   ]
 
-function superbowlWin(record) {
-    for(const win of record) {
-        if(win.result === 'W') {
-            return win.year
-        }
+function superbowlWin(records) {
+    const found = records.find((record) => {
+        return (record.result === 'W') 
+        }) 
+    if (found) {
+        return found.year
+    }    
+        console.log('found', found)
     }
-}
 
-record.find(superbowlWin)
+console.log(superbowlWin(record))
