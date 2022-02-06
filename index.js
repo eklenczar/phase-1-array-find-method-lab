@@ -12,4 +12,4 @@ function superbowlWin(record) {
     }
 }
 
-
+record.find(superbowlWin)
